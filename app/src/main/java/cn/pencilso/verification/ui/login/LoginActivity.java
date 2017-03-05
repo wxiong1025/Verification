@@ -13,6 +13,7 @@ import cn.pencilso.verification.adapter.FragmentAdapter;
 import cn.pencilso.verification.base.BaseActivity;
 import cn.pencilso.verification.ui.login.Fragment.LoginFrag;
 import cn.pencilso.verification.ui.login.Fragment.RegisterFrag;
+import cn.pencilso.verification.utils.ImageLoader;
 
 public class LoginActivity extends BaseActivity {
     private ImageView login_conver;
@@ -33,5 +34,6 @@ public class LoginActivity extends BaseActivity {
         FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager(), Arrays.asList(bfs), "登录", "注册");
         viewPager.setAdapter(fragmentAdapter);
         tabLayout.setupWithViewPager(viewPager);
+        ImageLoader.loadImage(R.drawable.photo,login_conver);
     }
 }
